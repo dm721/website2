@@ -1,37 +1,49 @@
-html {
-  font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
-}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
 
+  body{
+    color: black;}
+    
+  #blink_text{	
+    animation-name:blink;
+    width:280px;
+    animation-duration:.1s;
+    animation-timing-function:ease-in;
+    animation-iteration-count:Infinite;
+    }
 
-h1 {
-  font-size: 60px;
+  @keyframes blink{
+    0%{opacity: 1;;}
+    50%{opacity: 0;}
+    100%{opacity: 1;;}
+  }
+  
+p {
+  font-size: 40px;
   text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
+.container {
+  position: relative;
 }
 
-
-html {
-  background-image: url("images/tv-static.gif");
-  object-fit: fill;
-}
-
-body {
-  background-image: url("images/tv-static.gif");
-  object-fit: fill;
-}
-
-h1 {
-  background-image: url("images/tv-static.gif");
-  object-fit: fill;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
+.center {
+  position: fixed;
+  top: 50%;
+  width: 50%;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-style: italic;
+  font-family: 'Aref Ruqaa';
+  white-space: nowrap;
+  margin-left: 42%;
+  margin-top: 18%;
 }

@@ -1,5 +1,3 @@
-let myVariable = "Bob";
-//alert(myVariable);
 play();
 
 function play() {
@@ -7,8 +5,3 @@ function play() {
     audio.loop = true;
     audio.play();
   }
-
-  /*window.addEventListener('keydown', function (e) {
-    this.alert(`You pressed ${e.key}`);
-  }, false);
-  */

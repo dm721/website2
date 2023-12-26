@@ -1,49 +1,44 @@
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
+:root {
+    --doc-height: 100%;
+   }
+   
+   html,
+   body {
+    background-color: black;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100vh; /* fallback for Js load */
+    height: var(--doc-height);
+    overflow-y: hidden;
+    overflow-x: hidden;
+   }
 
-  body{
-    color: black;}
-    
-  #blink_text{	
-    animation-name:blink;
-    width:280px;
-    animation-duration:.1s;
-    animation-timing-function:ease-in;
+   img {
+    box-sizing: border-box;
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+   }
+
+   #pulse_image{	
+    animation-name:pulse; 
+    animation-duration: .3s;
+    animation-timing-function: ease-in;
     animation-iteration-count:Infinite;
     }
 
-  @keyframes blink{
-    0%{opacity: 1;;}
-    50%{opacity: 0;}
-    100%{opacity: 1;;}
-  }
-  
-p {
-  font-size: 40px;
-  text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
-}
+   @keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
 
-.container {
-  position: relative;
-}
+	70% {
+		transform: scale(1.15);
+	}
 
-.center {
-  position: fixed;
-  top: 50%;
-  width: 50%;
-  text-align: center;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-style: italic;
-  font-family: 'Aref Ruqaa';
-  white-space: nowrap;
-  margin-left: 42%;
-  margin-top: 18%;
+	100% {
+		transform: scale(1);
+	}
 }
+   

@@ -1,12 +1,11 @@
 documentHeight();
-play();
 checkVideo();
 
 function checkVideo() {
   window.onload = function(){
     const video = document.getElementById("myVideo");
     video.addEventListener("loadeddata", (event) => {
-      alert("video loaded");
+      play();
     });
   }
 }
@@ -21,6 +20,5 @@ function play() {
 function documentHeight() {
   const doc = document.documentElement
   doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
-  alert('test');
  }
 

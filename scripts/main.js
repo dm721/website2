@@ -1,5 +1,6 @@
 documentHeight();
 checkVideo();
+play();
 
 function checkVideo() {
   window.onload = function(){
@@ -11,7 +12,7 @@ function checkVideo() {
 }
 
 function play() {
-  var audio = new Audio('images/music.mp3');
+  var audio = new Audio('images/music2.mp3');
   audio.loop = true; 
   audio.play();
   audio.volume = 0.1;
